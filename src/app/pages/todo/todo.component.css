@@ -1,0 +1,143 @@
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container .add_todo textarea {
+    width: 100%;
+    background: #f7f7f7;
+    color: #333;
+    resize: none;
+    padding: .7rem;
+    text-transform: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.container .add_todo .add_button {
+    width: 300px;
+    height: 50px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: rgb(255, 174, 0);
+    transition: all .5s linear;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.container .add_todo .message {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: green;
+}
+.container .add_todo .message i {
+    margin-right: 5px;
+}
+.container .todo_inner {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    background: lightgrey;
+    margin-top: 5px;
+}
+.container .todo_inner .todo_empty {
+    margin: 0 auto;
+    width: 300px;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    background: red;
+    text-align: center;
+    box-shadow: 0 3px 15px 3px black;
+}
+.container .todo_inner .todo {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 8px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.container .todo_inner .todo p {
+    margin-bottom: 0;
+    border-right: 1px solid black;
+}
+.container .todo_inner .todo .todo_id {
+    width: 5%;
+    text-align: center;
+}
+.container .todo_inner .todo .todo_title {
+    width: 40%;
+    margin-left: 10px;
+}
+.container .todo_inner .todo .todo_buttons {
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+}
+.container .todo_inner .todo .todo_buttons .complete_todo {
+    width: 240px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: rgb(4, 235, 4);
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all .5s linear;
+}
+.container .todo_inner .todo .todo_buttons .complete_todo:hover {
+    background: green;
+}
+.container .todo_inner .todo .todo_buttons .complete_todo i {
+    margin-right: 10px;
+}
+.container .todo_inner .todo .todo_buttons .view_todo {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #5656ff;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all .5s linear;
+}
+.container .todo_inner .todo .todo_buttons .view_todo:hover {
+    background: blue;
+}
+.container .todo_inner .todo .todo_buttons .delete_todo {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #f64c4c;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all .5s linear;
+}
+.container .todo_inner .todo .todo_buttons .delete_todo:hover {
+    background: red;
+}
+.container .todo_inner .todo .todo_buttons .delete_todo i {
+    margin-right: 5px;
+}

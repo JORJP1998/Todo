@@ -1,0 +1,69 @@
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center" style="height: 620px;">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+  
+                  <form class="mx-1 mx-md-4">
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example1c" required pattern="[0-9a-zA-Z#!$&]+" class="form-control" placeholder="Your name" #name = "ngModel" [(ngModel)] = 'user.name' [ngModelOptions] = "{standalone: true}"/>
+                        <div class="invalid_input" [hidden] = "name.untouched || name.valid">Please write a correct name</div>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="form3Example3c" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" class="form-control" placeholder="Your email" #email = "ngModel" [(ngModel)] = 'user.email' [ngModelOptions] = "{standalone: true}"/>
+                        <div class="invalid_input" [hidden] = "email.untouched || email.valid">Please write a correct email</div>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4c" required minlength="6" class="form-control" placeholder="Your password" #password = "ngModel" [(ngModel)] = 'user.password' [ngModelOptions] = "{standalone: true}"/>
+                        <div class="invalid_input" [hidden] = "password.untouched || password.valid">Please write a correct password</div>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4cd" required minlength="6" class="form-control" placeholder="Repeat your password" #repeat_password = "ngModel" [(ngModel)] = 'user.repeat_password' [ngModelOptions] = "{standalone: true}"/>
+                        <div class="invalid_input" [hidden] = "repeat_password.untouched || repeat_password.valid">Please write a correct password</div>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button (click) = "userRegister()" type="button" class="btn btn-primary btn-lg" [disabled] = 'name.invalid || email.invalid || password.invalid || repeat_password.invalid'>Register</button>
+                    </div>
+  
+                  </form>
+                  <div *ngIf = 'created_message.length' class="account_created"><i class="fa-solid fa-circle-check"></i><p>{{created_message}}</p></div>
+                  <div *ngIf = 'error_message.length' class="error_message"><i class="fa-solid fa-circle-xmark"></i><p>{{error_message}}</p></div>
+
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+            <div style="width: 270px; display: flex; justify-content: space-between; margin: 0 auto;">
+              <p>If you already have account</p><a routerLink = '/login'>Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

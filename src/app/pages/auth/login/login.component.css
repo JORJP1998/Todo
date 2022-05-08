@@ -1,0 +1,20 @@
+.error_active {
+    width: 250px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0 3px;
+}
+.form-outline input{
+    margin-bottom: 5px;
+}
+.error_message {
+    width: 405px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+}

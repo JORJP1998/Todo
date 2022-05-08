@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="header">My Todos</h1>
+
+    <div class="add_todo">
+        <form action="">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Please write your todo" #title = "ngModel" [(ngModel)] = 'todo.title' [ngModelOptions] = "{standalone: true}"></textarea>
+            <button (click) = "addUsersTodo()" class="add_button" [disabled] = "!todo.title.length">Add todo</button>
+        </form>
+        <div class="message" *ngFor = "let key of message_arr"><i class="fa-solid fa-circle-check"></i>{{key.message}}</div>
+    </div>
+
+    <div class="todo_inner">
+        <div class="todo_list"*ngIf = "!todo_empty.length">
+            <div class="todo" *ngFor = "let todo of todo_list">
+                <p class="todo_id">{{todo.id}}</p>
+                <p class="todo_title">{{todo.title}}</p>
+                <div class="todo_buttons">
+                    <button class="complete_todo" (click) = "completeUserTodo(todo.id)"><i class="fa-solid fa-circle-check"></i>Complete todo</button>
+                    <button class="view_todo" (click) = "showTodoById(todo.id)">View todo</button>
+                    <button class="delete_todo"><i class="fa-solid fa-circle-xmark"></i>Delete todo</button>
+                </div>
+            </div>
+        </div>
+        <div class="todo_empty" *ngIf = "todo_empty.length"> 
+            {{todo_empty}}
+        </div>
+    </div>
+    
+</div>
